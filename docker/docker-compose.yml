@@ -68,13 +68,3 @@ services:
       - dcim-net
     depends_on:
       - influxdb
-
-  cloudflared:
-    image: cloudflare/cloudflared:latest
-    container_name: dcim-cloudflared
-    restart: unless-stopped
-    command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}
-    networks:
-      - dcim-net
-    depends_on:
-      - node-red
