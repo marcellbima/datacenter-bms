@@ -1,0 +1,6 @@
+docker/.env
+*.env
+!docker/.env.example
+node_modules/
+*.log
+.DS_Store
